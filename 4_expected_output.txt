@@ -1,0 +1,82 @@
+Invoice Date: 27/02/2019  
+Invoice Number: CN3-002254  
+Customer Name: RAJ DATA PROCESSORS  
+Vendor Name: RAJ SUPER WHOLESALE BAZAR  
+Total Amount: 3473.00  
+
+| Item Description                               | Quantity | Unit Price | Total Amount |
+|------------------------------------------------|----------|------------|--------------|
+| SWADIST SOYA OIL 1LTR (POUCH)                  | 10       | 82.00      | 820.00       |
+| BALAJI BASMATI RICE 1 KG                       | 12       | 48.00      | 576.00       |
+| LIFEBUOY SOAP (LEMON) 125GM*4 94/-             | 12       | 90.00      | 1080.00      |
+| CAMEL TEA 500GM                                | 6        | 99.00      | 594.00       |
+| DABUR HONEY 50GM 37/-                          | 2        | 36.00      | 72.00        |
+| GOLD COIN BREAD 33/-                           | 3        | 30.00      | 90.00        |
+| KISSAN TOMATO KETCHUP REFILL 450GM 50/-2ND     | 2        | 48.00      | 96.00        |
+| BRITANIA MUFFILLS CAKE 10/-                    | 1        | 10.00      | 10.00        |
+| KHARAK SAKHARIYA (SPECIAL) 1KG                 | 1        | 135.00     | 135.00       |
+
+
+{
+  "Invoice Number": "CN3-002254",
+  "Invoice Date": "27/02/2019",
+  "Customer Name": "RAJ DATA PROCESSORS",
+  "Vendor Name": "RAJ SUPER WHOLESALE BAZAR",
+  "Total Amount": "3473.00",
+  "Items": [
+    {
+      "Item Description": "SWADIST SOYA OIL 1LTR (POUCH)",
+      "Quantity": "10",
+      "Unit Price": "82.00",
+      "Total Amount": "820.00"
+    },
+    {
+      "Item Description": "BALAJI BASMATI RICE 1 KG",
+      "Quantity": "12",
+      "Unit Price": "48.00",
+      "Total Amount": "576.00"
+    },
+    {
+      "Item Description": "LIFEBUOY SOAP (LEMON) 125GM*4 94/-",
+      "Quantity": "12",
+      "Unit Price": "90.00",
+      "Total Amount": "1080.00"
+    },
+    {
+      "Item Description": "CAMEL TEA 500GM",
+      "Quantity": "6",
+      "Unit Price": "99.00",
+      "Total Amount": "594.00"
+    },
+    {
+      "Item Description": "DABUR HONEY 50GM 37/-",
+      "Quantity": "2",
+      "Unit Price": "36.00",
+      "Total Amount": "72.00"
+    },
+    {
+      "Item Description": "GOLD COIN BREAD 33/-",
+      "Quantity": "3",
+      "Unit Price": "30.00",
+      "Total Amount": "90.00"
+    },
+    {
+      "Item Description": "KISSAN TOMATO KETCHUP REFILL 450GM 50/-2ND",
+      "Quantity": "2",
+      "Unit Price": "48.00",
+      "Total Amount": "96.00"
+    },
+    {
+      "Item Description": "BRITANIA MUFFILLS CAKE 10/-",
+      "Quantity": "1",
+      "Unit Price": "10.00",
+      "Total Amount": "10.00"
+    },
+    {
+      "Item Description": "KHARAK SAKHARIYA (SPECIAL) 1KG",
+      "Quantity": "1",
+      "Unit Price": "135.00",
+      "Total Amount": "135.00"
+    }
+  ]
+}

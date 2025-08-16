@@ -1,0 +1,40 @@
+I want to build a Python script that extracts structured data from an invoice image.
+
+Requirements:
+1. Use pytesseract (Python wrapper for Tesseract) to perform OCR on the given invoice image.
+2. Extract the following fields using regex or text parsing:
+   - Invoice Date
+   - Invoice Number
+   - Customer Name
+   - Vendor Name
+   - Total Amount
+3. Extract all the item rows from the invoice table with these columns:
+   - Item Description
+   - Quantity
+   - Unit Price
+   - Total Amount
+4. Return the result in a strict JSON format with the following structure:
+
+{
+  "Invoice Number": "...",
+  "Invoice Date": "...",
+  "Customer Name": "...",
+  "Vendor Name": "...",
+  "Total Amount": "...",
+  "Items": [
+    {
+      "Item Description": "...",
+      "Quantity": "...",
+      "Unit Price": "...",
+      "Total Amount": "..."
+    }
+  ]
+}
+
+5. Ignore all other fields in the invoice and output **only** this JSON.
+6. Add error handling: if a field is not found, return null for that field.
+7. Keep the code modular with functions:
+   - `extract_text(image_path)` → OCR text
+   - `parse_invoice(text)` → regex-based field extraction
+   - `extract_items(text)` → parse tabular items
+   - `main()` → demo

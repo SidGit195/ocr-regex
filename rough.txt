@@ -1,0 +1,64 @@
+# invoice_parser.py
+import pytesseract
+from PIL import Image
+import re
+import json
+from typing import Dict, List
+import os
+
+# Add this after imports
+tesseract_cmd = os.getenv('TESSERACT_CMD', r'C:\Program Files\Tesseract-OCR\tesseract.exe')
+pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
+
+def extract_text(image_path: str) -> str:
+    try:
+        image = Image.open(image_path)
+        text = pytesseract.image_to_string(image)
+        return text
+    except Exception as e:
+        raise Exception(f"OCR failed: {str(e)}")
+
+def parse_invoice(text: str) -> Dict:
+    invoice_data = {
+        "invoice_number": None,
+        "invoice_date": None,
+        "customer_name": None,
+        "vendor_name": None,
+        "total_amount": None
+    }
+    
+    # Sample regex patterns - adjust based on invoice format
+    patterns = {
+        "invoice_number": r"Invoice[:\s]+([A-Z0-9-]+)",
+        "invoice_date": r"Date[:\s]+(\d{1,2}[-/]\d{1,2}[-/]\d{2,4})",
+        "customer_name": r"Bill To[:\s]+([A-Za-z\s]+)",
+        "vendor_name": r"From[:\s]+([A-Za-z\s]+)",
+        "total_amount": r"Total[:\s]+[$]?(\d+(?:\.\d{2})?)"
+    }
+    
+    for field, pattern in patterns.items():
+        match = re.search(pattern, text)
+        if match:
+            invoice_data[field] = match.group(1).strip()
+            
+    return invoice_data
+
+def extract_items(text: str) -> List[Dict]:
+    items = []
+    # Split text into lines and look for table-like structure
+    lines = text.split('\n')
+    
+    # Simple pattern matching for item rows
+    item_pattern = r"(.+?)\s+(\d+)\s+(\d+\.\d{2})\s+(\d+\.\d{2})"
+    
+    for line in lines:
+        match = re.search(item_pattern, line)
+        if match:
+            items.append({
+                "item_description": match.group(1).strip(),
+                "quantity": match.group(2),
+                "unit_price": match.group(3),
+                "total_amount": match.group(4)
+            })
+    
+    return items
