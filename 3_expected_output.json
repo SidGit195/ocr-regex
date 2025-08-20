@@ -1,0 +1,64 @@
+{
+    "invoice_date": "2019-02-27",
+    "invoice_number": "2254",
+    "customer_name": "RAJ DATA PROCESSORS",
+    "vendor_name": "RAJ SUPER WHOLESALE BAZAR",
+    "total_amount": 3473.00,
+    "items": [
+      {
+        "description": "SWADIST SOYA OIL 1LTR (POUCH)",
+        "quantity": 10,
+        "unit_price": 78.10,
+        "total_amount": 780.95
+      },
+      {
+        "description": "BALAJI BASMATI RICE 1 KG",
+        "quantity": 12,
+        "unit_price": 45.71,
+        "total_amount": 548.57
+      },
+      {
+        "description": "LIFEBUOY SOAP (LEMON) 125GM*4 94/-",
+        "quantity": 12,
+        "unit_price": 76.27,
+        "total_amount": 915.25
+      },
+      {
+        "description": "CAMEL TEA 500GM",
+        "quantity": 6,
+        "unit_price": 94.29,
+        "total_amount": 565.72
+      },
+      {
+        "description": "DABUR HONEY 50GM 37/-",
+        "quantity": 2,
+        "unit_price": 34.29,
+        "total_amount": 68.57
+      },
+      {
+        "description": "GOLD COIN BREAD 33/-",
+        "quantity": 3,
+        "unit_price": 30.00,
+        "total_amount": 90.00
+      },
+      {
+        "description": "KISSAN TOMATO KETCHUP REFILL 450GM 50/-2ND",
+        "quantity": 2,
+        "unit_price": 40.68,
+        "total_amount": 81.36
+      },
+      {
+        "description": "BRITANIA MUFFILLS CAKE 10/-",
+        "quantity": 1,
+        "unit_price": 8.48,
+        "total_amount": 8.48
+      },
+      {
+        "description": "KHARAK SAKHARIYA (SPECIAL) 1KG",
+        "quantity": 1,
+        "unit_price": 120.54,
+        "total_amount": 120.54
+      }
+    ]
+  }
+  
